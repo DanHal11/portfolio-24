@@ -1,0 +1,120 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    font-family: Consolas, monaco, monospace;
+}
+
+html {
+    /* Standard text-settings below */
+    font-size: 1em;
+    line-height: 1.4em;
+    font-family: Consolas, monaco, monospace;
+}
+
+footer {
+    color: #ba9106;
+    font-family: Consolas, monaco, monospace;
+}
+
+figcaption {
+    color: white;
+    font-family: Consolas, monaco, monospace;
+}
+
+body {
+    background: #017b85;
+    color: #fcd03d;
+    font-family: Consolas, monaco, monospace;
+}
+
+
+#container {
+    width: 800px;
+    margin: auto;
+    font-family: Consolas, monaco, monospace;
+}
+
+nav a {
+    color: white;
+    font-family: Consolas, monaco, monospace;
+}
+
+h2 {
+    color: #fcdb6a;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+a:hover {
+    color: #302f29;
+}
+
+.image-container {
+    border-radius: 15%;
+    transition: border-radius 0.3s ease-in-out;
+    width: 300px;
+    height: 400px;
+}
+
+.image-container:hover {
+    border-radius: 5%;
+}
+
+.image-container {
+    overflow: hidden;
+    width: 300px;
+    height: 400px;
+}
+
+.image-container img {
+    width: 300px;
+    height: 400px;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-container:not(:hover) img {
+    transition: transform 0.2s ease-in-out;
+    /* Smooth zoom-out */
+}
+
+.image-container-index {
+    border-radius: 15%;
+    transition: border-radius 0.3s ease-in-out;
+    width: 400px;
+    height: 300px;
+}
+
+.image-container-index:hover {
+    border-radius: 5%;
+}
+
+.image-container-index {
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+}
+
+.image-container-index img {
+    width: 400px;
+    height: 300px;
+}
+
+.image-container-index:hover img {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.image-container-index:not(:hover) img {
+    transition: transform 0.2s ease-in-out;
+    /* Smooth zoom-out */
+}
