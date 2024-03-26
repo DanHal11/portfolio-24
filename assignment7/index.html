@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>***</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function entre() {
+            var answers = [
+                "Yes.",
+                "Yes!",
+                "Most Likely.",
+                "Somewhat...",
+                "Potentially.",
+                "50/50 Chance.",
+                "Unlikely...",
+                "Highly improbable.",
+                "Not happening. Not even a chance.",
+                "There's a higher chance of you learning to fly."
+            ];
+
+            var createAnswer = answers[Math.floor(Math.random() * answers.length)];
+            const messageElement = document.getElementById("message");
+            messageElement.textContent = createAnswer;
+
+        }
+        entre(); <
+    </script>
+
+
+</head>
+
+
+<body>
+
+    <div id="container">
+
+        <form>
+            <p>What do you wish to know...</p>
+            <input type="text">
+        </form>
+
+
+
+    </div>
+
+
+</body></html>

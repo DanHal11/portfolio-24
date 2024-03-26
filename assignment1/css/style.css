@@ -1,0 +1,139 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html,
+
+body {
+    --foreground-color: linear-gradient(to right, red, blue);
+    margin-top: 0px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: Consolas, monaco, monospace;
+    color: white;
+    background-color: black;
+}
+
+body.yellow-theme {
+    --foreground-color: linear-gradient(to right, #412d00, #1f361a);
+    --link-color: #d9c4a0;
+    --link-hover: #3b2e15;
+    --box-color: #2b2720;
+    width: 100%;
+    font-family: Consolas, monaco, monospace;
+    color: #f6be48;
+    background-color: #1e1b16;
+    transition: background-color 0.5s ease;
+}
+
+body.blue-theme {
+    --foreground-color: linear-gradient(to right, #00504e, #1b324b);
+    --link-color: #b0ccca;
+    --link-hover: #1b3534;
+    --box-color: #263030;
+    width: 100%;
+    font-family: Consolas, monaco, monospace;
+    background-color: #191c1c;
+    color: #4ddad7;
+    transition: background-color 0.5s ease;
+}
+
+body.red-theme {
+    --foreground-color: linear-gradient(to right, #7b2949, #623f20);
+    --link-color: #e3bdc6;
+    --link-hover: #422931;
+    --box-color: #332426;
+    width: 100%;
+    font-family: Consolas, monaco, monospace;
+    background-color: #201a1b;
+    color: #ffb0c8;
+    transition: background-color 0.5s ease;
+}
+
+a {
+    color: var(--link-color);
+    transition: color 0.5s ease;
+
+}
+
+a:hover {
+    color: var(--link-hover);
+    transition: color 0.2s ease;
+
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+p {
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+
+header {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    background: var(--foreground-color);
+    padding: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: background-color 0.5s ease;
+}
+
+h1.header-text {
+    opacity: 100%;
+    color: white;
+}
+
+h2.header-text {
+    opacity: 100%;
+    color: white;
+}
+
+h1 {
+    font-family: Consolas, monaco, monospace;
+}
+
+h2 {
+    font-family: Consolas, monaco, monospace;
+}
+
+#color-switcher {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 40px;
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+    background: var(--foreground-color);
+    transition: color 0.5s ease;
+
+}
+
+#color-switcher:hover {
+    transform: rotate(90deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+#color-switcher:not(:hover) {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.text-box {
+    padding: 20px;
+    background-color: var(--box-color);
+    width: 60%;
+    margin: auto;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.header-link {}

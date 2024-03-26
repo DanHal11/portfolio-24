@@ -1,0 +1,142 @@
+html,
+body {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: black;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+}
+
+.top-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.hold {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.your {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    position: absolute;
+    top: 80px;
+    left: 220px;
+    letter-spacing: 5px;
+}
+
+.colors {
+    font-family: "Caveat", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    position: absolute;
+    top: 140;
+    left: 95px;
+}
+
+.against {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10em;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 1175px;
+    left: 855px;
+}
+
+.the-wall {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 9.5em;
+    position: absolute;
+    rotate: 90deg;
+    top: 800px;
+    left: 1300px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.dripping-text h1 {
+    font-size: 3em;
+    /* Create a linear gradient for the text color effect */
+    background-image: linear-gradient(to right, red 0%, black 100%);
+    color: white;
+}
+
+@keyframes drip {
+    from {
+        clip: rect(0px, 0px, 100%, 0px);
+        /* Start with top clipped */
+    }
+
+    to {
+        clip: rect(100%, 0px, 100%, 0px);
+        /* Clip the entire text slowly */
+    }
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    letter-spacing: 5px;
+}
+
+.bottom-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.char-set {
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+.designer {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.bottom-section {
+    position: relative;
+}
+
+.bottom-section::after {
+    content: "";
+    /* Add a pseudo-element */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the element */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* Create a circle */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Set semi-transparent white */
+    z-index: -1;
+    /* Place behind the text content */
+}
