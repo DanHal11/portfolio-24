@@ -1,321 +1,142 @@
-/* Basic CSS resets -- leveling slight inconsistencies in browsers */
 html,
 body {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-    font-family: Consolas, monaco, monospace;
-}
-
-.menu-container {}
-
-.menu-toggle {
-    cursor: pointer;
-}
-
-.menu-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-}
-
-input[type="checkbox"] {
-    display: none;
-}
-
-input[type="checkbox"]:checked ~ .menu-content {
-    max-height: 100%;
-}
-
-html {
-    font-size: 1em;
-    line-height: 1.4em;
-    font-family: Consolas, monaco, monospace;
-}
-
-footer {
-    color: #ba9106;
-    font-family: Consolas, monaco, monospace;
-}
-
-figcaption {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: black;
     color: white;
-    font-family: Consolas, monaco, monospace;
 }
 
-body {
-    background: #017b85;
-    color: #fcd03d;
-    font-family: Consolas, monaco, monospace;
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
 }
 
-
-#container {
-    width: 800px;
-    margin: auto;
-    font-family: Consolas, monaco, monospace;
+.top-section {
+    padding: 50px;
+    text-align: center;
 }
 
-#container::after {
-    margin: auto;
-    content: '';
-    display: block;
+.hold {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    letter-spacing: 2px;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/Credit-to-Zander.webp");
-    animation: move-background 30s linear infinite;
-    opacity: 0.15;
-    z-index: -1;
-    position: fixed;
-
+    top: 0px;
+    left: 0px;
 }
 
-@keyframes move-background {
-    0% {
-        background-position: 0% 0%;
-    }
-
-    100% {
-        background-position: 94.5% 0%;
-    }
+.your {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    position: absolute;
+    top: 80px;
+    left: 220px;
+    letter-spacing: 5px;
 }
 
-nav a {
+.colors {
+    font-family: "Caveat", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    position: absolute;
+    top: 140;
+    left: 95px;
+}
+
+.against {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10em;
+    letter-spacing: 3px;
+    position: absolute;
+    top: 1175px;
+    left: 855px;
+}
+
+.the-wall {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 9.5em;
+    position: absolute;
+    rotate: 90deg;
+    top: 800px;
+    left: 1300px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.dripping-text h1 {
+    font-size: 3em;
+    /* Create a linear gradient for the text color effect */
+    background-image: linear-gradient(to right, red 0%, black 100%);
     color: white;
-    font-family: Consolas, monaco, monospace;
-    text-decoration: none;
-
 }
 
-h2 {
-    color: #fcdb6a;
+@keyframes drip {
+    from {
+        clip: rect(0px, 0px, 100%, 0px);
+        /* Start with top clipped */
+    }
+
+    to {
+        clip: rect(100%, 0px, 100%, 0px);
+        /* Clip the entire text slowly */
+    }
 }
 
-ul {
-    list-style: none;
-    padding-left: 0px;
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    letter-spacing: 5px;
 }
 
-a:hover {
-    color: #302f29;
+.bottom-section {
+    padding: 50px;
+    text-align: center;
 }
 
-.image-container {
-    border-radius: 100%;
-    transition: border-radius 0.3s ease-in-out;
-    width: 300px;
-    height: 400px;
+.char-set {
+    font-size: 1.5em;
+    line-height: 2;
 }
 
-.image-container:hover {
-    border-radius: 109px;
+.designer {
+    font-style: italic;
+    margin-top: 20px;
 }
 
-.image-container {
-    overflow: hidden;
-    width: 300px;
-    height: 400px;
-}
-
-.image-container img {
-    width: 300px;
-    height: 400px;
-}
-
-.image-container:hover img {
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
-}
-
-.image-container:not(:hover) img {
-    transition: transform 0.6s ease-in-out;
-}
-
-.image-container-index {
-    margin-bottom: 10px;
-    border-radius: 75px;
+.bottom-section {
     position: relative;
-    transition: border-radius 0.4s ease-in-out;
-    transition: 0.4s ease-in-out;
-    width: 400px;
-    height: 300px;
-    overflow: hidden;
-    outline: 0.2rem solid white;
-    outline-offset: 0.2rem;
 }
 
-.image-container-index:hover {
-    border-radius: 25px;
-    background-color: #fcd03d;
-    outline: 0.2rem solid #302f29;
-    transition: 0.2s ease-in-out;
-}
-
-.image-container-index img {
-    width: 400px;
-    height: 300px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-container-index:hover img {
-    transform: scale(1.05);
-
-}
-
-#experiment-button {
-    background-color: #017b85;
-    color: #000;
-    margin-top: 1px;
-    padding: 0px 5px;
-    border: 3px solid transparent;
-    border-radius: 7px;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 1em;
-    line-height: 1.4em;
-    font-family: Consolas, monaco, monospace;
-    transition: opacity 0.5s ease-in-out;
-}
-
-#experiment-button:hover {
-    animation: color-cycle 2s linear infinite;
-    /*transition: opacity 0.5s ease-in-out;*/
-
-}
-
-#experiment-button:not(:hover) {
-    opacity: 0%;
-    /*    transition: opacity 0.1s ease-in-out;*/
-}
-
-@keyframes color-cycle {
-    0% {
-        background-color: #B24C63;
-    }
-
-    25% {
-        background-color: #5438dc;
-    }
-
-    50% {
-        background-color: #357DED;
-    }
-
-    75% {
-        background-color: #56EEF4;
-    }
-
-    100% {
-        background-color: #B24C63;
-    }
-}
-
-.grid-ass {
-    display: grid;
-    grid-template-columns: repeat();
-
-    grid-gap: 10px;
-}
-
-.grid-ass a {}
-
-.ass-one-two,
-.ass-three,
-.ass-four,
-.ass-five,
-.ass-six,
-.ass-seven,
-.ass-eight,
-.ass-nine {
+.bottom-section::after {
+    content: "";
+    /* Add a pseudo-element */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the element */
     width: 200px;
     height: 200px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-    display: grid;
-}
-
-
-
-
-
-
-/* BELOW HERE IS IMPORTANT. DO NOT FORGET TO FINISH THIS, IDIOT */
-
-
-#nav-buttons {
-    display: flex;
-
-}
-
-.grid-container {
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.nav-button {
-    flex: 1 1 30%;
-    text-align: center;
-    background: white;
-    border-radius: 75px;
-    font-family: Consolas, monaco, monospace;
-    width: 30%;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding-top: 2.5%;
-    padding-bottom: 2%;
-    position: relative;
-    font-size: 20%;
-    border: none;
-    outline: 0.2rem solid white;
-    outline-offset: 0.2rem;
-    overflow: hidden;
-    cursor: pointer;
-    transition: 0.6s ease-in-out;
-    text-decoration: none;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-button {
-        flex-basis: auto;
-        flex: 1 1 50%;
-        margin: 10px;
-        width: 3%;
-    }
-}
-
-.nav-button:is(:hover) {
-    background-color: white;
-    outline: 0.2rem solid #302f29;
-    transition: 0.2s ease-in-out;
-    border-radius: 15px;
-}
-
-.nav-button:is(:hover) .nav-fade {
-    display: block;
-
-}
-
-.nav-fade {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
-
-.nav-fade {
-    z-index: 1;
-    background: linear-gradient(to left, rgb(253, 224, 71), transparent 60%);
-}
-
-.nav-button-font {
-    position: relative;
-    z-index: 2;
-    color: black;
-    font-size: 1.25rem;
+    border-radius: 50%;
+    /* Create a circle */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Set semi-transparent white */
+    z-index: -1;
+    /* Place behind the text content */
 }
