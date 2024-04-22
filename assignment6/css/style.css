@@ -28,6 +28,7 @@ header {
     letter-spacing: -0.1em;
     text-align: center;
     padding-bottom: 40px;
+    cursor: context-menu;
 
 }
 
@@ -40,16 +41,22 @@ header {
     margin: auto;
     display: inline-block;
     z-index: 2;
+    cursor: context-menu;
+
 }
 
 #space {
     padding-right: 40px;
+    cursor: context-menu;
+
 }
 
 .word span:hover {
     font-weight: 900;
     transition: 0.2s ease;
     transition: font-weight 0.3s ease-in-out;
+    cursor: context-menu;
+
 }
 
 * {
