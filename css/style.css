@@ -7,6 +7,32 @@ body {
     font-family: "Lexend", sans-serif;
 }
 
+.word {
+    padding-top: 30px;
+    transition: 0.2s ease;
+    transition: font-weight 0.3s ease-in-out;
+    letter-spacing: -0.1em;
+}
+
+.word span {
+    display: inline;
+    transition: 0.2s ease;
+    transition: font-weight 0.3s ease-in-out;
+    font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+}
+
+#space {
+    padding-right: 40px;
+}
+
+.word span:hover {
+    color: #fcd03d;
+    font-weight: 900;
+    transition: 0.2s ease;
+    transition: font-weight 0.3s ease-in-out;
+}
+
 .menu-container {}
 
 .menu-toggle {
@@ -54,6 +80,8 @@ body {
     width: 800px;
     margin: auto;
     font-family: Consolas, monaco, monospace;
+    padding-top: 40px;
+
 }
 
 #container::after {
@@ -182,13 +210,10 @@ a:hover {
 
 #experiment-button:hover {
     animation: color-cycle 2s linear infinite;
-    /*transition: opacity 0.5s ease-in-out;*/
-
 }
 
 #experiment-button:not(:hover) {
     opacity: 0%;
-    /*    transition: opacity 0.1s ease-in-out;*/
 }
 
 @keyframes color-cycle {
@@ -216,7 +241,6 @@ a:hover {
 .grid-ass {
     display: grid;
     grid-template-columns: repeat();
-
     grid-gap: 10px;
 }
 
@@ -231,13 +255,54 @@ a:hover {
     font-size: 25px;
     float: left;
     width: 200px;
-    height: 200px;
+    height: 120px;
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
     display: flex;
+    justify-content: center;
     text-align: center;
+    transition: 0.2s ease-in-out;
 }
+
+#ass-one-two:is(:hover),
+#ass-three:is(:hover),
+#ass-four:is(:hover),
+#ass-five:is(:hover),
+#ass-six:is(:hover),
+#ass-seven:is(:hover),
+#ass-eight:is(:hover),
+#ass-nine:is(:hover) {}
+
+ass-one-two-fade {
+    background: linear-gradient(to left, red, blue);
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.nav-button:is(:hover) .nav-fade {
+    display: block;
+}
+
+ass-three-fade {}
+
+ass-four-fade {}
+
+ass-five-fade {}
+
+ass-six-fade {}
+
+ass-seven-fade {}
+
+ass-eight-fade {}
+
+ass-nine-fade {}
+
+
 
 #ass-one-two a,
 #ass-three a,
@@ -247,16 +312,54 @@ a:hover {
 #ass-seven a,
 #ass-eight a,
 #ass-nine a {
-    width: 200px;
-    height: 200px;
+    overflow: auto;
     padding-top: 10px;
     display: flex;
     text-align: center;
-    color: red;
+    color: black;
+    background: white;
+    border-radius: 40px;
+    transition: 0.6s ease-in-out;
+    z-index: 2;
 }
 
+#ass-one-two a:is(:hover),
+#ass-three a:is(:hover),
+#ass-four a:is(:hover),
+#ass-five a:is(:hover),
+#ass-six a:is(:hover),
+#ass-seven a:is(:hover),
+#ass-eight a:is(:hover),
+#ass-nine a:is(:hover) {
+    background: #302f29;
+    color: white;
+    z-index: 2;
+    border-radius: 10px;
+    transition: 0.4s ease-in-out;
+}
 
+#ass-one-two a:is(:hover),
+#ass-three a:is(:hover),
+#ass-four a:is(:hover),
+#ass-five a:is(:hover),
+#ass-six a:is(:hover),
+#ass-seven a:is(:hover),
+#ass-eight a:is(:hover),
+#ass-nine a:is(:hover) .ass-one-two-fade {
+    display: block;
 
+}
+
+.ass-one-two-fade {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    background: linear-gradient(to left, rgb(253, 224, 71), transparent 60%);
+}
 
 /* BELOW HERE IS IMPORTANT. DO NOT FORGET TO FINISH THIS, IDIOT */
 
@@ -275,7 +378,7 @@ a:hover {
     flex: 1 1 30%;
     text-align: center;
     background: white;
-    border-radius: 75px;
+    border-radius: 60px;
     font-family: Consolas, monaco, monospace;
     width: 30%;
     margin-right: 20px;
@@ -321,9 +424,6 @@ a:hover {
     position: absolute;
     left: 0px;
     top: 0px;
-}
-
-.nav-fade {
     z-index: 1;
     background: linear-gradient(to left, rgb(253, 224, 71), transparent 60%);
 }
