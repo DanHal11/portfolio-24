@@ -12,6 +12,8 @@ body {
     transition: 0.2s ease;
     transition: font-weight 0.3s ease-in-out;
     letter-spacing: -0.1em;
+    cursor: context-menu;
+
 }
 
 .word span {
@@ -20,10 +22,18 @@ body {
     transition: font-weight 0.3s ease-in-out;
     font-size: 45px;
     font-family: "Montserrat", sans-serif;
+    cursor: context-menu;
+
+}
+
+#assignment-page-footer {
+    transform: rotate(9 0deg);
 }
 
 #space {
     padding-right: 40px;
+    cursor: context-menu;
+
 }
 
 .word span:hover {
@@ -31,6 +41,7 @@ body {
     font-weight: 900;
     transition: 0.2s ease;
     transition: font-weight 0.3s ease-in-out;
+    cursor: context-menu;
 }
 
 .menu-container {}
