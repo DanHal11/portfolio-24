@@ -1,0 +1,161 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.word {
+    padding-top: 30px;
+    transition: 0.2s ease;
+    transition: font-weight 0.3s ease-in-out;
+    letter-spacing: -0.1em;
+    cursor: context-menu;
+
+}
+
+.word span {
+    display: inline;
+    transition: 0.2s ease;
+    transition: font-weight 0.3s ease-in-out;
+    font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+    cursor: context-menu;
+
+}
+
+.word span:hover {
+    color: #fcd03d;
+    font-weight: 900;
+    transition: 0.2s ease;
+    transition: font-weight 0.3s ease-in-out;
+    cursor: context-menu;
+}
+
+.menu-toggle {
+    cursor: pointer;
+}
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4em;
+    font-family: Consolas, monaco, monospace;
+}
+
+footer {
+    color: #ba9106;
+    font-family: Consolas, monaco, monospace;
+}
+
+figcaption {
+    color: white;
+    font-family: Consolas, monaco, monospace;
+}
+
+body {
+    background: #d4d4d4;
+    color: black;
+    font-family: Consolas, monaco, monospace;
+}
+
+
+#container {
+    font-family: Consolas, monaco, monospace;
+    width: 100%;
+    height: 25%;
+}
+
+nav a {
+    color: white;
+    font-family: Consolas, monaco, monospace;
+    text-decoration: none;
+
+}
+
+h2 {}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+#nav-buttons {
+    display: flex;
+
+}
+
+.grid-container {
+    flex-wrap: wrap;
+    justify-content: left;
+    background: black;
+}
+
+.nav-button {
+    text-align: center;
+    font-family: Consolas, monaco, monospace;
+    width: 15%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    position: relative;
+    font-size: 20%;
+    border: none;
+    outline-offset: 0.2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    text-decoration: none;
+}
+
+.nav-button:is(:hover) {
+    transition: 0.2s ease-in-out;
+    border-bottom-style: groove;
+    border-bottom-color: white;
+}
+
+.nav-button:is(:hover) .nav-fade {
+    display: block;
+
+}
+
+.nav-button-font {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 1.25rem;
+}
+
+
+.splide__slide img {
+    width: 100%;
+    height: auto;
+}
+
+.article-list {
+    display: flex;
+}
+
+.article {
+    flex: 1;
+    padding: 20px;
+    border: 3px solid black;
+    margin-right: 10px;
+}
+
+.article:last-child {
+    margin-right: 0;
+}
+
+.article h3 {
+    margin-top: 0;
+}
+
+.article p {
+    margin-bottom: 0;
+}
