@@ -6,48 +6,38 @@
 
     <meta charset="utf-8">
 
-    <title>***</title>
+    <title>Definitely not an 8-ball</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        function entre() {
-            var answers = [
-                "Yes.",
-                "Yes!",
-                "Most Likely.",
-                "Somewhat...",
-                "Potentially.",
-                "50/50 Chance.",
-                "Unlikely...",
-                "Highly improbable.",
-                "Not happening. Not even a chance.",
-                "There's a higher chance of you learning to fly."
-            ];
 
-            var createAnswer = answers[Math.floor(Math.random() * answers.length)];
-            const messageElement = document.getElementById("message");
-            messageElement.textContent = createAnswer;
-
-        }
-        entre(); <
-    </script>
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
 
     <div id="container">
-
         <form>
-            <p>What do you wish to know...</p>
+            <span>Ask a YES or NO question. . .</span>
+            <span id="spook">If you DARE. . .</span>
+
             <input type="text">
+            <input type="button" onclick="entre()" value="Ask the GENIE . . .">
+            <p id="message"></p>
         </form>
 
-
+        <script src="java/script.js"></script>
 
     </div>
 
+    <div id="nav-buttons" class="grid-container">
+        <a href="../index.html" type="button" class="nav-button">
+            <div class="nav-fade"></div>
+            <span class="nav-button-font">Return to INDEX</span>
+        </a>
+    </div>
+</body>
 
-</body></html>
+</html>
