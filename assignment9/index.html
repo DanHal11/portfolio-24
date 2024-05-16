@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sidebar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav class=" sidebar">
+        <div class="sidebar-top-wrapper">
+            <div class="sidebar-top">
+                <a href="#" class="title">
+                    <span class="hide name">
+                        <p>Assignment 9</p>
+                    </span>
+                </a>
+            </div>
+
+
+
+            <button class="expand-btn" type="button">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="exp-btn" role="img">
+                    <title id="exp-btn">Expand/Collapse Menu</title>
+                    <path d="M6.00979 2.72L10.3565 7.06667C10.8698 7.58 10.8698 8.42 10.3565 8.93333L6.00979 13.28" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="link hide">Close Menu</span>
+            </button>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="sidebar-links">
+            <ul>
+                <li>
+                    <a href="../index.html" title="index" class="tooltip">
+                        <img src="../img/tootsie,4000x3000.jpg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round">
+                        <span class="link hide">Return to INDEX</span>
+                        <span class="tooltip__content">Index</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#secret" class="tooltip" onclick="toggleVisibility()" onclick="toggleBackground()">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-bar" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 12m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                            <path d="M9 8m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                            <path d="M15 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v14a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+                            <path d="M4 20l14 0" />
+                        </svg>
+                        <span class="link hide">SEEEEEEEECRET</span>
+                        <span class="tooltip__content">Secret Button</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="toggle-element" class="hidden">
+        <h1 class="word">
+            <span>B</span>
+            <span>O</span>
+            <span>O</span>
+            <span id="space">!!!!</span>
+            <span>d</span>
+            <span>i</span>
+            <span id="space">d</span>
+            <span id="space">I</span>
+            <span>s</span>
+            <span>c</span>
+            <span>a</span>
+            <span>r</span>
+            <span id="space">e</span>
+            <span>y</span>
+            <span>o</span>
+            <span>u</span>
+            <span>???</span>
+        </h1>
+    </div>
+    <script src="java/script.js"></script>
+</body>
+
+</html>
