@@ -4,6 +4,9 @@ body {
     margin: 0px;
     padding: 0px;
     height: 100%;
+    display: flex;
+    display: inline-block;
+    justify-content: center;
 }
 
 html {
@@ -15,6 +18,20 @@ html {
 
 /* Mobile First CSS: we'll design for phone sizes first, then add media queries for larger screens later */
 
+.vidimg {
+    text-align: center;
+}
+
+.vidimg img {
+    margin-right: 10px;
+    width: 425px;
+    /* Adjust margin for spacing between image and video */
+}
+
+.vidimg iframe {
+    width: 500px;
+    height: 350px;
+}
 
 body {
     background: black;
@@ -30,7 +47,7 @@ body {
 header,
 footer {
     background: black;
-    color: darkgray;
+    color: dimgray;
 }
 
 header {
@@ -54,7 +71,8 @@ figure {
 }
 
 figure img {
-    width: 100%;
+    width: 20%;
+
 }
 
 section {
@@ -62,9 +80,6 @@ section {
     padding: 1em;
 }
 
-#video {
-    width: 100%;
-}
 
 /* ========================================
 MEDIA QUERIES!
@@ -73,17 +88,22 @@ You can adjust the min-width numbers below, and add as many new media queries as
 
 
 /* Minimum width for laptops. */
-@media all and (min-width: 769px) {
-    #video {
-        width: 100%;
-        height: 350px;
+@media all and (max-width: 670px) {
+    .vidimg iframe {
+        width: 80%;
+        height: 200px;
     }
-}
 
-/* closes 769px+ */
+    .vidimg img {
+        width: 80%;
+        height: 30%;
+        /* Adjust margin for spacing between image and video */
+    }
+
+    /* closes 769px+ */
 
 
-/* Minimum width for desktop screens. */
-@media all and (min-width: 1024px) {}
+    /* Minimum width for desktop screens. */
+    @media all and (min-width: 1024px) {}
 
-/* closes 1024px+ */
+    /* closes 1024px+ */
